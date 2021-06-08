@@ -11,7 +11,7 @@ import { HumanApiDataSource } from '../datasource/humanapidtos.datasources';
 })
 export class DisplayHumanApiComponent extends AppComponentBase implements OnInit {
   dataSource: HumanApiDataSource;
-  displayedColumns = ['id'];
+  displayedColumns = ['id', 'date', 'duration', 'distance', 'humanId', 'light', 'moderate', 'sedentary', 'source'];
   constructor(injector: Injector,
     private _humanApiService: HumanApiDataServiceProxy) {
     super(injector);
