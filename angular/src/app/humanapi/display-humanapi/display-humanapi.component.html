@@ -1,0 +1,60 @@
+<mat-table class="lessons-table mat-elevation-z8" [dataSource]="dataSource">
+  
+    <ng-container matColumnDef="id">
+        <div *matHeaderCellDef>#</div>
+        <div *matCellDef="let data">{{data.id}}</div>
+    </ng-container>
+  
+    <ng-container matColumnDef="date">
+        <div *matHeaderCellDef>Data</div>
+        <div class="date-cell"
+                  *matCellDef="let data">{{data.date}}</div>
+    </ng-container>
+  
+    <ng-container matColumnDef="duration">
+        <div *matHeaderCellDef>Duration</div>
+        <div class="duration-cell"
+                  *matCellDef="let data">{{data.duration}}</div>
+    </ng-container>
+
+    <ng-container matColumnDef="distance">
+        <div *matHeaderCellDef>Distance</div>
+        <div class="distance-cell"
+                  *matCellDef="let data">{{data.distance}}</div>
+    </ng-container>    
+
+    <ng-container matColumnDef="humanId">
+        <div *matHeaderCellDef>Human Id</div>
+        <div class="humanId-cell"
+                  *matCellDef="let data">{{data.humanId}}</div>
+    </ng-container>   
+    
+    <ng-container matColumnDef="light">
+        <div *matHeaderCellDef>Light</div>
+        <div class="light-cell"
+                  *matCellDef="let data">{{data.light}}</div>
+    </ng-container>    
+    
+    <ng-container matColumnDef="moderate">
+        <div *matHeaderCellDef>Moderate</div>
+        <div class="moderate-cell"
+                  *matCellDef="let data">{{data.moderate}}</div>
+    </ng-container>  
+    
+    <ng-container matColumnDef="sedentary">
+        <div *matHeaderCellDef>Sedentary</div>
+        <div class="sedentary-cell"
+                  *matCellDef="let data">{{data.sedentary}}</div>
+    </ng-container>  
+    
+    <ng-container matColumnDef="source">
+        <div *matHeaderCellDef>Source</div>
+        <div class="source-cell"
+                  *matCellDef="let data">{{data.source}}</div>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    
+    <mat-row *matRowDef="let row; columns: displayedColumns"></mat-row>
+    
+</mat-table>

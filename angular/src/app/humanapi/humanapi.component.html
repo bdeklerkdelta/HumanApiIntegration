@@ -1,0 +1,18 @@
+﻿
+    <div class="hapi__token-container">
+      <div *ngIf="!connectClosed; else elseBlock">
+        <h3 class="title is-3">Connect your Health Data</h3>
+        <p class="has-text-centered">
+            <button class="button is-link"
+              [attr.data-hapi-token]="token">Continue
+            </button>
+        </p>
+      </div>
+      <ng-template #elseBlock>
+        <h3 class="title is-3">
+            Thank you for connecting your Health Data.
+        </h3>
+      </ng-template>
+
+      <button (click)="syncData()">Sync HumanAPI data</button>
+  </div>
