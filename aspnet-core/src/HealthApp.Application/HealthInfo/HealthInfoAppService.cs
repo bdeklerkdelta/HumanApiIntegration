@@ -164,8 +164,8 @@ namespace HealthApp.HealthInfo
                 client.BaseAddress = new Uri("https://auth.humanapi.co");
                 var content = new FormUrlEncodedContent(new[]
                 {
-                new KeyValuePair<string, string>("client_id", "765736671ca6d27dda7511e03c1593a9ea603aec"),
-                new KeyValuePair<string, string>("client_secret", "23159b772c066e291040571ed198aa3f185808af"),
+                new KeyValuePair<string, string>("client_id", "pull_from_config"),
+                new KeyValuePair<string, string>("client_secret", "pull_from_config"),
                 new KeyValuePair<string, string>("type", tokenType),
                 new KeyValuePair<string, string>("client_user_id", user.Id.ToString()),
                 new KeyValuePair<string, string>("client_user_email", user.EmailAddress),
